@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SuperApp</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<header>
+		<div class="container">
+			<img src="img/Logo.png" alt="Logo de SuperApp">
+			<nav>
+				<button class="toggle-menu" aria-expanded="false" aria-controls="menu"><span
+						class="screen-reader-text">Menu</span></button>
+				<ul class="menu" id="menu" hidden>
+					<li><a href="#about">A propos</a></li>
+					<li><a href="#service">Services</a></li>
+					<li><a href="#team">L'equipe</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<section class="hero" id="hero">
+			<div class="container">
+				<h1>super app</h1>
+				<h2>L'application trop super !</h2>
+				<div class="hero_link">
+					<a href="#" class="btn hero_btn"><i class="far fa-thumbs-up"></i> Like it</a>
+					<a href="#" class="btn hero_btn"><i class="fas fa-heart"></i> Love it</a>
+					<a href="#" class="btn hero_btn"><i class="fas fa-shopping-cart"></i> Buy it</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="about" id="about">
+			<h2>elle fait des trucs supers !</h2>
+			<div class="about_card">
+				<div class="circle"><i class="fas fa-utensils"></i></div>
+				<h3 class="h2-like">Mettre la table</h3>
+				<p class="circle-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nisi voluptates
+					accusamus odit id dignissimos expedita rem voluptate asperiores quidem! Itaque beatae perspiciatis
+					vitae dicta qui sit
+					officia dolor eligendi.</p>
+			</div>
+			<div class="about_card">
+				<div class="circle"><i class="fas fa-bed"></i></div>
+				<h3 class="h2-like">Faire le lit</h3>
+				<p class="circle-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nisi voluptates
+					accusamus odit id
+					dignissimos expedita rem voluptate asperiores quidem! Itaque beatae perspiciatis vitae dicta qui sit
+					officia dolor eligendi.</p>
+			</div>
+			<div class="about_card">
+				<div class="circle"><i class="fas fa-fire"></i></div>
+				<h3 class="h2-like">Allumer le feu</h3>
+				<p class="circle-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur cum tempore
+					ab minima adipisci
+					earum, ipsam est provident maxime vitae. Qui saepe neque nemo est quos, temporibus consectetur
+					corrupti
+					esse.</p>
+			</div>
+			<div class="about_card">
+				<div class="circle"><i class="fas fa-leaf"></i></div>
+				<h3 class="h2-like">Ramasser les feuilles</h3>
+				<p class="circle-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur cum tempore
+					ab minima adipisci
+					earum, ipsam est provident maxime vitae. Qui saepe neque nemo est quos, temporibus consectetur
+					corrupti
+					esse.</p>
+			</div>
+			<div class="about_card">
+				<div class="circle"><i class="fas fa-umbrella"></i></div>
+				<h3 class="h2-like">Protéger de la pluie</h3>
+				<p class="circle-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur cum tempore
+					ab minima adipisci
+					earum, ipsam est provident maxime vitae. Qui saepe neque nemo est quos, temporibus consectetur
+					corrupti
+					esse.</p>
+			</div>
+			<div class="about_card">
+				<div class="circle"><i class="fas fa-dollar-sign"></i></div>
+				<h3 class="h2-like">Vider votre compte</h3>
+				<p class="circle-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur cum tempore
+					ab minima adipisci
+					earum, ipsam est provident maxime vitae. Qui saepe neque nemo est quos, temporibus consectetur
+					corrupti
+					esse.</p>
+			</div>
+		</section>
+
+		<section class="team" id="team">
+			<div class="hero-team">
+				<h2>La super équipe à l'origine de SuperApp</h2>
+			</div>
+			<div class="team_card">
+				<img src="img/avaone.jpg" alt="">
+				<h3>Tex Talign</h3>
+				<a href="mailto:example@example.fr" class="btn team_btn"><i class="fas fa-envelope"></i> Lui écrire</a>
+			</div>
+			<div class="team_card">
+				<img src="img/avatwo.jpg" alt="">
+				<h3>Marge inn</h3>
+				<a href="mailto:example@example.fr" class="btn team_btn"><i class="fas fa-envelope"></i> Lui écrire</a>
+			</div>
+			<div class="team_card">
+				<img src="img/avathree.jpg" alt="">
+				<h3>Les Ten</h3>
+				<a href="mailto:example@example.fr" class="btn team_btn"><i class="fas fa-envelope"></i> Lui écrire</a>
+			</div>
+			<div class="team_card">
+				<img src="img/avafour.jpg" alt="">
+				<h3>Ash Tehemel</h3>
+				<a href="mailto:example@example.fr" class="btn team_btn"><i class="fas fa-envelope"></i> Lui écrire</a>
+			</div>
+		</section>
+	</main>
+
+	<footer id="footer">
+		<h2>envoyez-nous un message</h2>
+		<form action="form" class="form container">
+			<div class="form_ctn">
+				<label for="name">Votre nom</label>
+				<input type="text" id="name" name="user_name" require pattern="[a-zA-Z0-9\s]+">
+			</div>
+			<div class="form_ctn">
+				<label for="mail"> Votre e-mail</label>
+				<input type="email" id="mail" name="user_mail" require
+					pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+.[a-zA-Z.]{2,15}">
+			</div>
+			<div class="form_ctn">
+				<label for="msg"> Votre Message</label>
+				<textarea id="msg" name="user_message"></textarea>
+			</div>
+			<div class="btn_sub">
+				<button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Envoyez</button>
+			</div>
+		</form>
+	</footer>
+
+
+	<script src="./js/nav.js"></script>
+	<script src="https://kit.fontawesome.com/6242f3eb00.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

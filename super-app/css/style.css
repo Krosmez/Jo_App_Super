@@ -1,0 +1,461 @@
+:root {
+    --raider: #DD5555;
+}
+
+/* ---------------- CONTAINER ---------------- */
+
+.container {
+    max-width: 30rem;
+    margin: auto;
+}
+
+@media (min-width: 36em) {
+    /* 36em * 16 = 576px */
+    .container {
+        max-width: 55rem;
+    }
+}
+
+@media (min-width: 48em) {
+    /* 48em * 16 = 768px */
+    .container {
+        max-width: 69rem;
+    }
+}
+
+@media (min-width: 62em) {
+    /* 62em * 16 = 992px */
+    .container {
+        max-width: 67rem;
+    }
+}
+
+@media (min-width: 75em) {
+    /* 75em * 16 = 1200px */
+    .container {
+        max-width: 100rem;
+    }
+}
+
+/* ---------------- BOUTON ---------------- */
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    border-radius: .5rem;
+    min-width: 12rem;
+    padding: 1.5rem;
+    transition: ease-in-out .5s;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.hero_btn {
+    box-shadow: inset 0 0 0 transparent;
+    background-color: #fff;
+    color: black;
+}
+.hero_btn i {
+    margin-right:1rem;
+}
+.team_btn {
+    box-shadow: inset 0 0 0 transparent;
+    border: 1px solid transparent;
+    background-color: var(--raider);
+    color: #fff;
+}
+@media (min-width: 62em) {
+    .hero_btn:hover {
+        box-shadow: inset 200px 0 0 var(--raider);
+        color: #fff;
+    }
+    .team_btn:hover {
+        border:1px solid var(--raider);
+        box-shadow: inset 200px 0 0 #fff;
+        color: var(--raider);
+    }
+}
+
+/* ---------------- FONTS ---------------- */
+.menu li a,
+label,
+.about p,
+nav a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+}
+.h1-like,
+.hero h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+}
+footer h2,
+.team h2,
+.about h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+}
+.hero h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    color: #fff;
+}
+.about .h2-like,
+.team_card h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+}
+footer h2,
+.team h2,
+.menu li a,
+nav a,
+label {
+    color: #fff;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+    background-color: var(--raider);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header img {
+    padding: 1rem;
+}
+.no-scroll {
+    overflow: hidden;
+}
+.menu {
+    transform: translateX(100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--raider);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 10000;
+    pointer-events: none;
+    transition: .3s;
+}
+
+.toggle-menu {
+    position: relative;
+    z-index: 10001;
+    padding: 1rem 0;
+    border: 0;
+    width: 3rem;
+    height: 2.2rem;
+    background-clip: content-box;
+    color: #fff;
+}
+.menu li {
+    padding: 2rem;
+}
+.toggle-menu::before, .toggle-menu::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 0.2rem;
+    background-color: #fff;
+    transition: .3s;
+    transform-origin: left center;
+}
+
+.toggle-menu::before {
+    top: 0;
+}
+
+.toggle-menu::after {
+    bottom: 0;
+}
+
+.toggle-menu[aria-expanded="true"] {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.toggle-menu[aria-expanded="true"]::before {
+    transform: rotate(42.5deg);
+}
+
+.toggle-menu[aria-expanded="true"]::after {
+    transform: rotate(-42.5deg);
+}
+
+.menu:not([hidden]) {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: all;
+}
+@media (min-width:36em) {
+    .toggle-menu {
+        display: none;
+    }
+    header .container {
+        justify-content: start;
+        align-items: center;
+    }
+    .menu {
+        background-color: unset;
+        transform: unset;
+        flex-direction: row;
+        position: static;
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+@media (min-width:62em) {
+    .menu li {
+        background-color: transparent;
+        transition: ease-in-out .3s;
+    }
+    .menu li:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* ---------------- MAIN - HERO ---------------- */
+
+.hero {
+    background-image: url(../img/about.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+    margin-bottom: 6rem;
+}
+
+.hero h1 {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.hero h2 {
+    margin-bottom: 2rem;
+}
+
+.hero h1, .hero h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero_link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #fff;
+    padding-top: 3rem;
+}
+
+.hero_link a {
+    margin-bottom: 2rem;
+}
+@media (min-width: 36em) {
+    /* 36em * 16 = 576px */
+    .hero_link {
+        max-width: 50rem;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: auto;
+    }
+}
+
+@media (min-width: 48em) {
+    /* 48em * 16 = 768px */
+    .hero {
+        padding-top: 25rem;
+        padding-bottom: 25rem;
+    }
+}
+/* ---------------- MAIN - ABOUT ---------------- */
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.about h2 {
+    text-transform: uppercase;
+    margin-bottom: 6rem;
+}
+.about_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 6rem;
+}
+.circle {
+    display: flex;
+    justify-content: center;
+    background-color: var(--raider);
+    border-radius: 50%;
+    padding: 2rem;
+    min-width: 11.4rem;
+    max-width: 11.4rem;
+    min-height: 11.4rem;
+    margin-bottom: 2rem;
+}
+.fa-utensils, .fa-bed, .fa-fire, .fa-leaf, .fa-umbrella, .fa-dollar-sign {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 7rem;
+    color: #fff;
+}
+
+.about h3 {
+    text-align: unset;
+    margin-bottom: 2rem;
+}
+
+.about p {
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+
+@media (min-width: 48em) {
+    /* 62em * 16 = 992px */
+    .about {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: .5fr repeat(3, 1fr);
+        max-width: 75rem;
+        margin: auto;
+    }
+    .about h2 {
+        grid-area: 1/1/2/3;
+    }
+}
+
+@media (min-width: 75em) {
+    /* 75em * 16 = 1200px */
+    .about {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto repeat(2, 1fr);
+        max-width: 90rem;
+        margin: auto;
+    }
+    .about h2 {
+        grid-area: 1/1/2/4;
+    }
+}
+
+/* ---------------- MAIN - TEAM ---------------- */
+
+.hero-team {
+    background-image: url(../img/teamfull.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    margin-bottom: 6rem;
+}
+
+.team_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.team_card, .team_card img, .team_card h3 {
+    margin-bottom: 3.5rem;
+}
+
+@media (min-width: 48em) {
+    /* 48em * 16 = 768px */
+    .hero-team {
+        background-position: top;
+    }
+    .team {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto repeat(2, 1fr);
+    }
+    .hero-team {
+        grid-area: 1/1/2/3;
+    }
+}
+
+@media (min-width: 62em) {
+    /* 62em * 16 = 992px */
+    .team {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto 1fr;
+    }
+    .hero-team {
+        grid-area: 1/1/2/5;
+    }
+}
+/* ---------------- FOOTER ---------------- */
+
+footer {
+    background-color: var(--raider);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+footer h2 {
+    text-transform: uppercase;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 6rem;
+}
+
+.form_ctn {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.btn_sub {
+    display: flex;
+    justify-content: flex-end;
+}
+@media (min-width: 75em) {
+    /* 75em * 16 = 1200px */
+    .form {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: auto 150px auto;
+        column-gap: 30px ;
+        max-width: 76rem;
+    }
+    textarea {
+        min-height: 12rem;
+    }
+    .form_ctn:nth-child(3) {
+        grid-area: 2/1/3/3;
+    }
+    .btn_sub {
+        grid-area:3/2/4/3;
+        margin-top: 1rem;
+    }
+}
